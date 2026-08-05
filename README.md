@@ -32,13 +32,14 @@ Welcome to the official 3D Portfolio repository of **Vinayak Subhash Deshmane** 
 
 - **🎨 Modern Interactive About Me**: Filterable tab interface highlighting Academic Journey, Industrial Trainings, Hackathons, Major Projects, and Technical Skillset.
 - **📄 Printable HTML Resume**: Built-in, dedicated resume route (`public/resume.html`) with one-click **🖨️ Print / Download PDF** capability.
+- **📜 Verified Certificate Previews**: Interactive certificate cards with full-screen image preview modals and direct PDF/PNG downloads for **IISc Bangalore ArtPark Hackathon** and **Android Development Training**.
 - **🏢 Industrial Training Highlights**:
-  - **UEF EdTech Pvt. Ltd.** (6-Week Android Development Training)
+  - **UR Engineering Friend / UEF EdTech Pvt. Ltd.** (6-Week Android Development Training - Outstanding Performance)
   - **Ajay Cables & Broadband Service OPC Pvt. Ltd.** (6-Week Networking & Infrastructure Training)
 - **🏆 Hackathons & Recognition**:
-  - **ArtPark CodeForge Hackathon** by **IISc Bangalore** & Unstop (Prototype Round)
+  - **ArtPark CodeForge Hackathon** by **IISc Bangalore** & Unstop (Team *Hack Pack* - Prototype Round)
   - **AI-Based IoT Health Monitoring System** presented at technical festivals
-- **🌓 Dark & Light Theme**: Seamless theme toggling with persistent state.
+- **🎨 3-Theme Switcher (Dark, Light, Cyber Cyan)**: Dynamic theme switching between 🌙 Dark Cosmic, ☀️ Light Minimal, and ⚡ Cyber Cyan (Ultra-high contrast ocean obsidian) for optimal color legibility.
 - **🌐 3D Interactive Graphics**: Three.js canvas featuring 3D Computer setup, Earth Globe, Floating Tech Balls, and Starry background canvas.
 
 ---
