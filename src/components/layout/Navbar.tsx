@@ -7,6 +7,7 @@ import { navLinks } from "../../constants";
 import { logo } from "../../assets";
 import { config } from "../../constants/config";
 import { useTheme } from "../../context/ThemeContext";
+import { getAssetUrl } from "../../utils/assets";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>("");
@@ -97,7 +98,7 @@ const Navbar = () => {
 
           {/* Resume Download CTA */}
           <a
-            href={config.html.resumeUrl}
+            href={getAssetUrl(config.html.resumeUrl)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-xl bg-purple-500/10 border border-purple-500/30 text-accent hover:bg-accent hover:text-white transition-all duration-200"

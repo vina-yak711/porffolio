@@ -6,6 +6,7 @@ import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
 import { socialLinks } from "../../constants";
 import { SocialIcon } from "../atoms/SocialIcon";
+import { getAssetUrl } from "../../utils/assets";
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             {/* Download Resume CTA */}
             <a
-              href={config.html.resumeUrl}
+              href={getAssetUrl(config.html.resumeUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-purple-600 text-white font-medium rounded-xl shadow-lg shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"

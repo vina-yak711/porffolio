@@ -8,6 +8,7 @@ import { certificationsData } from "../../constants";
 import { config } from "../../constants/config";
 import { fadeIn } from "../../utils/motion";
 import { TCertification } from "../../types";
+import { getAssetUrl } from "../../utils/assets";
 
 const CertificationCard: React.FC<
   { index: number; onPreview: (img: string, title: string, pdfUrl?: string) => void } & TCertification
@@ -22,6 +23,9 @@ const CertificationCard: React.FC<
   skillsBadge,
   onPreview,
 }) => {
+  const formattedImage = image ? getAssetUrl(image) : "";
+  const formattedCredentialUrl = credentialUrl ? getAssetUrl(credentialUrl) : "";
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
       <div className="bg-tertiary rounded-2xl p-6 border border-gray-700/40 hover:border-accent transition-all duration-300 shadow-xl flex flex-col justify-between h-full group overflow-hidden">
@@ -29,13 +33,13 @@ const CertificationCard: React.FC<
           {image && (
             <div className="relative mb-4 overflow-hidden rounded-xl bg-black/30 border border-gray-700/50 group-hover:border-accent/50 transition-colors">
               <img
-                src={image}
+                src={formattedImage}
                 alt={title}
                 className="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                 <button
-                  onClick={() => onPreview(image, title, credentialUrl)}
+                  onClick={() => onPreview(formattedImage, title, formattedCredentialUrl)}
                   className="p-2.5 rounded-full bg-accent text-white hover:bg-accent-light transition-colors shadow-lg flex items-center gap-1 text-xs font-semibold px-3"
                   title="View Certificate Image"
                 >
@@ -52,7 +56,7 @@ const CertificationCard: React.FC<
 
             {credentialUrl && (
               <a
-                href={credentialUrl}
+                href={formattedCredentialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-tertiary border border-gray-700/40 text-secondary hover:text-accent hover:border-accent transition-colors text-xs font-medium"
