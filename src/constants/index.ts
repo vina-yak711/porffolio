@@ -5,6 +5,9 @@ import type {
   TExperience,
   TTestimonial,
   TProject,
+  TEducation,
+  TCertification,
+  TSocialLink,
 } from "../types";
 
 import {
@@ -15,19 +18,11 @@ import {
   javascript,
   typescript,
   html,
-  css,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
@@ -40,8 +35,24 @@ export const navLinks: TNavLink[] = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "education",
+    title: "Education",
+  },
+  {
+    id: "certifications",
+    title: "Achievements",
   },
   {
     id: "contact",
@@ -51,224 +62,314 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Web Developer",
+    title: "AI & Data Science Specialist",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Android App Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Full Stack Engineer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Software & Network Engineer",
     icon: creator,
   },
 ];
 
 const technologies: TTechnology[] = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
+    name: "Python",
     icon: javascript,
+    category: "Frontend",
   },
   {
-    name: "TypeScript",
+    name: "Java & Adv. Java",
     icon: typescript,
+    category: "Backend",
   },
   {
     name: "React JS",
     icon: reactjs,
+    category: "Frontend",
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "TypeScript",
+    icon: typescript,
+    category: "Frontend",
   },
   {
     name: "Node JS",
     icon: nodejs,
+    category: "Backend",
   },
   {
-    name: "MongoDB",
+    name: "Kotlin & Android",
+    icon: mobile,
+    category: "Frontend",
+  },
+  {
+    name: "SQL & PL/SQL",
     icon: mongodb,
+    category: "Database",
   },
   {
-    name: "Three JS",
+    name: "HTML 5 & CSS 3",
+    icon: html,
+    category: "Frontend",
+  },
+  {
+    name: "Machine Learning",
     icon: threejs,
+    category: "Tools",
   },
   {
-    name: "git",
+    name: "C & C++",
     icon: git,
+    category: "Backend",
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "PHP & Full Stack",
+    icon: nodejs,
+    category: "Backend",
   },
   {
-    name: "docker",
+    name: "Networking & Security",
     icon: docker,
+    category: "Tools",
   },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Android Development Industrial Intern",
+    companyName: "UEF EdTech Pvt. Ltd.",
+    icon: mobile,
+    iconBg: "#10B981",
+    date: "1st June – 15th July",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Successfully completed an intensive 6-week industrial training in native Android application development.",
+      "Engineered mobile user interfaces using modern layout paradigms, activity lifecycle management, and intent flows.",
+      "Integrated RESTful APIs and handled backend database connectivity for real-time mobile data synchronization.",
+      "Mastered application debugging, memory profiling, and Google Play packaging & deployment methodologies.",
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Networking & Technical Support Intern",
+    companyName: "Ajay Cables & Broadband Service OPC Pvt. Ltd.",
+    icon: backend,
+    iconBg: "#06B6D4",
+    date: "07/06/2023 – 18/07/2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completed 6-week industrial training gaining deep exposure to enterprise network architecture and broadband infrastructure.",
+      "Performed hands-on technical troubleshooting, line testing, router configurations, and hardware diagnostics.",
+      "Collaborated with customer support teams to resolve live network connectivity issues and optimize service uptime.",
+      "Acquired practical experience in applying technical engineering principles within corporate business workflows.",
     ],
   },
+];
+
+const educationData: TEducation[] = [
   {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+    degree: "B.Tech / B.E. in Artificial Intelligence & Data Science (3rd Year)",
+    institution: "Siddhivinayak Technical Campus, Shegaon",
+    location: "Shegaon, Maharashtra",
+    duration: "Pursuing (2025 – 2028)",
+    description:
+      "Expanding advanced technical expertise in Artificial Intelligence, Machine Learning, Data Analytics, Cloud Engineering, Full Stack Development, and Android Applications.",
+    achievements: [
+      "ArtPark CodeForge Hackathon Participant (IISc Bangalore / Unstop)",
+      "Presented AI-Based IoT Health Monitoring System at Technical Festivals",
     ],
+    iconBg: "#915EFF",
   },
   {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+    degree: "Diploma in Computer Engineering",
+    institution: "Government Polytechnic, Hingoli",
+    location: "Hingoli, Maharashtra",
+    duration: "Completed (2025)",
+    gpaOrGrade: "Aggregate: 75.80%",
+    description:
+      "Built strong foundation in software engineering, object-oriented programming (C, C++, Java, C#), relational databases (SQL/PL-SQL), networking, and operating systems.",
+    achievements: [
+      "Secured 75.80% Aggregate marks in Computer Engineering Diploma",
+      "Engineered desktop software projects including IP Finder and Management Systems",
     ],
+    iconBg: "#11998e",
+  },
+  {
+    degree: "10th Standard (SSC)",
+    institution: "Manik Memorial Aryan School, Hingoli",
+    location: "Hingoli, Maharashtra",
+    duration: "Passed (2021)",
+    gpaOrGrade: "Score: 75.00%",
+    description:
+      "Completed secondary education with strong fundamentals in Mathematics, Science, and Information Technology.",
+    achievements: ["Scored 75% in Secondary School Certificate (SSC) Examinations"],
+    iconBg: "#F59E0B",
+  },
+];
+
+const certificationsData: TCertification[] = [
+  {
+    title: "ArtPark CodeForge Hackathon - Prototype Round",
+    issuer: "Indian Institute of Science (IISc), Bangalore (via Unstop)",
+    date: "Recent",
+    credentialUrl: "https://unstop.com",
+    description:
+      "Collaborated in a high-intensity hackathon prototype development round to create innovative real-world software solutions.",
+    skillsBadge: ["IISc Bangalore", "Unstop", "Prototype Dev", "Teamwork", "AI"],
+  },
+  {
+    title: "6-Week Industrial Training in Android Development",
+    issuer: "UEF EdTech Pvt. Ltd.",
+    date: "1st June – 15th July",
+    description:
+      "Completed certified industrial training covering Android App Architecture, API Integration, Activity Lifecycle, and App Deployment.",
+    skillsBadge: ["Android", "Mobile Dev", "Java/Kotlin", "API Integration"],
+  },
+  {
+    title: "6-Week Industrial Training in Networking & Infrastructure",
+    issuer: "Ajay Cables & Broadband Service OPC Pvt. Ltd.",
+    date: "07/06/2023 – 18/07/2023",
+    description:
+      "Completed professional industry training in networking infrastructure, troubleshooting, broadband systems, and IT workflows.",
+    skillsBadge: ["Networking", "Infrastructure", "Troubleshooting", "Support"],
+  },
+];
+
+const socialLinks: TSocialLink[] = [
+  {
+    name: "GitHub",
+    url: "https://github.com/vina-yak711",
+    iconName: "github",
+  },
+  {
+    name: "WhatsApp",
+    url: "https://wa.me/?text=Hi%20Vinayak",
+    iconName: "whatsapp",
+  },
+  {
+    name: "Email (Primary)",
+    url: "mailto:vinuu02052005@gmail.com",
+    iconName: "mail",
+  },
+  {
+    name: "Email (Secondary)",
+    url: "mailto:subhashdeshmane0@gmail.com",
+    iconName: "mail",
   },
 ];
 
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Vinayak demonstrated exceptional technical curiosity and dedication during his 6-week Android training. His ability to grasp complex API integrations and mobile UI design is impressive.",
+    name: "Training Mentor",
+    designation: "Senior Android Engineer",
+    company: "UEF EdTech Pvt. Ltd.",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Vinayak showed great analytical thinking and problem-solving skills during his industrial networking training. Highly motivated engineer!",
+    name: "Technical Supervisor",
+    designation: "Infrastructure Lead",
+    company: "Ajay Cables & Broadband Service",
+    image: "https://randomuser.me/api/portraits/men/44.jpg",
   },
 ];
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "AI-Based Health Monitoring System",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Smart healthcare solution presented at technical festivals, combining Artificial Intelligence algorithms with IoT sensory data to monitor patient health metrics in real-time.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "python", color: "blue-text-gradient" },
+      { name: "ai-machine-learning", color: "green-text-gradient" },
+      { name: "iot", color: "pink-text-gradient" },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/vina-yak711/ai-health-monitoring",
+    liveDemoLink: "https://github.com/vina-yak711/ai-health-monitoring",
   },
   {
-    name: "Job IT",
+    name: "Web Resume Builder System",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web-based application designed for university students to quickly build, format, and generate professional, ATS-compliant resumes with responsive previews.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
+      { name: "html-css", color: "pink-text-gradient" },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/vina-yak711/resume-builder",
+    liveDemoLink: "https://github.com/vina-yak711/resume-builder",
   },
   {
-    name: "Trip Guide",
+    name: "Startup Government Scheme Portal",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Digital web portal designed for startup businesses to discover, compare, and apply for government initiatives, grants, and support programs.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "php", color: "blue-text-gradient" },
+      { name: "sql", color: "green-text-gradient" },
+      { name: "full-stack", color: "pink-text-gradient" },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/vina-yak711/startup-scheme-portal",
+    liveDemoLink: "https://github.com/vina-yak711/startup-scheme-portal",
+  },
+  {
+    name: "Advanced IP Address Finder",
+    description:
+      "Comprehensive network utility providing detailed IP address analysis, geolocation tracking, network diagnostic logs, and security verification.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "networking", color: "green-text-gradient" },
+      { name: "security", color: "pink-text-gradient" },
+    ],
+    image: carrent,
+    sourceCodeLink: "https://github.com/vina-yak711/ip-address-finder",
+    liveDemoLink: "https://github.com/vina-yak711/ip-address-finder",
+  },
+  {
+    name: "Hotel Management System",
+    description:
+      "Full-fledged management software system handling room allocations, guest check-in/out records, billing calculation, and database administration.",
+    tags: [
+      { name: "java", color: "blue-text-gradient" },
+      { name: "pl-sql", color: "green-text-gradient" },
+      { name: "desktop-app", color: "pink-text-gradient" },
+    ],
+    image: jobit,
+    sourceCodeLink: "https://github.com/vina-yak711/hotel-management-system",
+    liveDemoLink: "https://github.com/vina-yak711/hotel-management-system",
+  },
+  {
+    name: "Student Entry & Exit Record System",
+    description:
+      "Automated record management application for educational campuses to log and audit daily student movements, timing, and security authorization.",
+    tags: [
+      { name: "csharp", color: "blue-text-gradient" },
+      { name: "vbnet", color: "green-text-gradient" },
+      { name: "sql", color: "pink-text-gradient" },
+    ],
+    image: tripguide,
+    sourceCodeLink: "https://github.com/vina-yak711/student-record-system",
+    liveDemoLink: "https://github.com/vina-yak711/student-record-system",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  educationData,
+  certificationsData,
+  socialLinks,
+  testimonials,
+  projects,
+};

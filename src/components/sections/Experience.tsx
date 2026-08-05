@@ -16,12 +16,15 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "var(--bg-tertiary, #151030)",
+        color: "var(--text-primary, #fff)",
+        boxShadow: "var(--card-shadow)",
+        border: "1px solid var(--border-color)",
+        borderRadius: "1rem",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid var(--bg-tertiary, #151030)" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: experience.iconBg || "#915EFF" }}
       icon={
         <div className="flex h-full w-full items-center justify-center">
           <img
@@ -33,20 +36,20 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
       }
     >
       <div>
-        <h3 className="text-[24px] font-bold text-white">{experience.title}</h3>
+        <h3 className="text-[22px] font-bold text-primary">{experience.title}</h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-accent text-[15px] font-semibold mt-1"
           style={{ margin: 0 }}
         >
           {experience.companyName}
         </p>
       </div>
 
-      <ul className="ml-5 mt-5 list-disc space-y-2">
+      <ul className="ml-5 mt-4 list-disc space-y-2">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 pl-1 text-[14px] tracking-wider"
+            className="text-secondary pl-1 text-[14px] leading-relaxed"
           >
             {point}
           </li>
@@ -61,8 +64,8 @@ const Experience = () => {
     <>
       <Header useMotion={true} {...config.sections.experience} />
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+      <div className="mt-14 flex flex-col">
+        <VerticalTimeline lineColor="var(--accent-color, #915EFF)">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
           ))}
@@ -72,4 +75,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "experience");

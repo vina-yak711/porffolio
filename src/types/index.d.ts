@@ -26,9 +26,38 @@ export type TProject = {
   }[];
   image: string;
   sourceCodeLink: string;
+  liveDemoLink?: string;
 } & Required<Pick<TCommonProps, "name">>;
 
-export type TTechnology = Required<Omit<TCommonProps, "title">>;
+export type TTechnology = {
+  category?: "Frontend" | "Backend" | "Database" | "Tools";
+} & Required<Omit<TCommonProps, "title">>;
+
+export type TEducation = {
+  degree: string;
+  institution: string;
+  location?: string;
+  duration: string;
+  gpaOrGrade?: string;
+  description: string;
+  achievements?: string[];
+  iconBg?: string;
+};
+
+export type TCertification = {
+  title: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
+  description: string;
+  skillsBadge?: string[];
+};
+
+export type TSocialLink = {
+  name: string;
+  url: string;
+  iconName: string;
+};
 
 export type TNavLink = {
   id: string;
@@ -42,3 +71,4 @@ export type TMotion = {
   delay: number;
   duration: number;
 };
+

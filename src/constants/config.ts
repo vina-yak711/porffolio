@@ -9,10 +9,17 @@ type TConfig = {
     title: string;
     fullName: string;
     email: string;
+    secondaryEmail?: string;
+    github?: string;
+    whatsapp?: string;
+    location: string;
+    resumeUrl: string;
   };
   hero: {
     name: string;
+    role: string;
     p: string[];
+    downloadResumeText: string;
   };
   contact: {
     form: {
@@ -32,7 +39,10 @@ type TConfig = {
   } & TSection;
   sections: {
     about: Required<TSection>;
+    tech: TSection;
     experience: TSection;
+    education: TSection;
+    certifications: TSection;
     feedbacks: TSection;
     works: Required<TSection>;
   };
@@ -40,55 +50,69 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Vinayak Subhash Deshmane | AI & Data Science Engineer Portfolio",
+    fullName: "Vinayak Subhash Deshmane",
+    email: "vinuu02052005@gmail.com",
+    secondaryEmail: "subhashdeshmane0@gmail.com",
+    github: "https://github.com/vina-yak711",
+    whatsapp: "vina_yak711",
+    location: "Maharashtra, India",
+    resumeUrl: "/resume.html",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Vinayak Deshmane",
+    role: "AI & Data Science Specialist",
+    p: [
+      "Artificial Intelligence & Data Science Student | Software Engineer",
+      "Building intelligent AI systems, scalable full-stack apps, and Android solutions.",
+    ],
+    downloadResumeText: "Download Resume",
   },
   contact: {
     p: "Get in touch",
-    h2: "Contact.",
+    h2: "Contact Me.",
     form: {
       name: {
         span: "Your Name",
         placeholder: "What's your name?",
       },
-      email: { span: "Your Email", placeholder: "What's your email?" },
+      email: { span: "Your Email", placeholder: "What's your email address?" },
       message: {
         span: "Your Message",
-        placeholder: "What do you want to say?",
+        placeholder: "Tell me about your project or inquiry...",
       },
     },
   },
   sections: {
     about: {
-      p: "Introduction",
-      h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      p: "Get to know me",
+      h2: "About Me.",
+      content: `Hello, I'm Vinayak Subhash Deshmane. I am a passionate and technology-driven Artificial Intelligence & Data Science student with a strong academic foundation in Computer Engineering and a deep interest in building innovative software solutions. For me, technology is not just about writing code—it's about solving real-world problems, creating meaningful digital experiences, and continuously learning to stay ahead in an ever-evolving industry.`,
+    },
+    tech: {
+      p: "Technologies & Tools",
+      h2: "Skills & Expertise.",
     },
     experience: {
-      p: "What I have done so far",
-      h2: "Work Experience.",
+      p: "Professional Training & Internships",
+      h2: "Industrial Training.",
+    },
+    education: {
+      p: "Academic Background",
+      h2: "Education.",
+    },
+    certifications: {
+      p: "Professional Growth & Recognition",
+      h2: "Hackathons & Achievements.",
     },
     feedbacks: {
-      p: "What others say",
+      p: "Endorsements & Recommendations",
       h2: "Testimonials.",
     },
     works: {
-      p: "My work",
+      p: "Selected Portfolio",
       h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+      content: `The following projects demonstrate my technical capabilities across Artificial Intelligence, Web Platforms, Mobile Apps, and Desktop Systems.`,
     },
   },
 };
