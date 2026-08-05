@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinayak Subhash Deshmane - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #7c3aed;
+      --accent-light: #8b5cf6;
+      --text: #334155;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 45px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+    }
+
+    /* Action bar */
+    .action-bar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: justify-between;
+      align-items: center;
+    }
+
+    .btn-print {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+      transition: all 0.2s;
+    }
+
+    .btn-print:hover {
+      background: var(--accent-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-back {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn-back:hover {
+      color: var(--accent);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 25px;
+      margin-top: 15px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .contact-info a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+    }
+
+    p.summary {
+      font-size: 14.5px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .item-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .item-company {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .item-date {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    ul.bullets {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-top: 8px;
+    }
+
+    ul.bullets li {
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-cat {
+      background: #f1f5f9;
+      padding: 12px 16px;
+      border-radius: 10px;
+    }
+
+    .skill-cat-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* Philosophy Box */
+    .philosophy-box {
+      background: #f5f3ff;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 13.5px;
+      color: #4c1d95;
+      margin-top: 10px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .action-bar {
+        display: none;
+      }
+
+      .container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="action-bar">
+    <a href="/" class="btn-back">← Back to Portfolio</a>
+    <button onclick="window.print()" class="btn-print">
+      🖨️ Print / Download PDF
+    </button>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Vinayak Subhash Deshmane</h1>
+      <div class="subtitle">Artificial Intelligence & Data Science Student | Software Engineer</div>
+      
+      <div class="contact-info">
+        <div>📧 <a href="mailto:vinuu02052005@gmail.com">vinuu02052005@gmail.com</a></div>
+        <div>📧 <a href="mailto:subhashdeshmane0@gmail.com">subhashdeshmane0@gmail.com</a></div>
+        <div>🌐 <a href="https://github.com/vina-yak711" target="_blank">github.com/vina-yak711</a></div>
+        <div>💬 WhatsApp: @vina_yak711</div>
+        <div>📍 Maharashtra, India</div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        Passionate and technology-driven Artificial Intelligence & Data Science student with a solid foundation in Computer Engineering. Experienced in full-stack web engineering, native Android app development, machine learning algorithms, and system networking. Proven record of developing practical academic projects and completing industrial engineering trainings. Committed to building scalable software solutions that solve real-world problems.
+      </p>
+      <div class="philosophy-box">
+        "Technology is not just about writing code; it is about solving real-world problems, creating meaningful experiences, and continuously pushing the boundaries of innovation."
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="section-title">Education</div>
+      
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Bachelor of Engineering in Artificial Intelligence & Data Science (3rd Year)</div>
+            <div class="item-company">Siddhivinayak Technical Campus, Shegaon</div>
+          </div>
+          <div class="item-date">2025 – 2028 (Pursuing)</div>
+        </div>
+        <ul class="bullets">
+          <li>Currently pursuing 3rd year specialization in AI, Machine Learning, Data Analytics, Cloud Computing, Full Stack Web Engineering, and Android Applications.</li>
+          <li>Participant in ArtPark CodeForge Hackathon organized by Indian Institute of Science (IISc), Bangalore (via Unstop).</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Diploma in Computer Engineering</div>
+            <div class="item-company">Government Polytechnic, Hingoli</div>
+          </div>
+          <div class="item-date">2022 – 2025 (Aggregate: 75.80%)</div>
+        </div>
+        <ul class="bullets">
+          <li>Graduated in 2025 with an Aggregate score of 75.80% in Computer Engineering.</li>
+          <li>Developed core mastery in C, C++, Java, C#, VB.NET, Relational Databases (SQL/PL-SQL), Computer Networks, and Operating Systems.</li>
+          <li>Engineered desktop applications including IP Finder, Hotel Management, and Student Entry & Exit Systems.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">10th Standard (SSC)</div>
+            <div class="item-company">Manik Memorial Aryan School, Hingoli</div>
+          </div>
+          <div class="item-date">Passed 2021 (75.00%)</div>
+        </div>
+        <ul class="bullets">
+          <li>Secured 75.00% in Secondary School Certificate (SSC) Board Examinations in 2021.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Industrial Training -->
+    <section>
+      <div class="section-title">Industrial Training & Experience</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Android Development Industrial Training Program</div>
+            <div class="item-company">UR Engineering Friend / UEF EdTech Pvt. Ltd. (CIN: U72900BR2022OPC058386)</div>
+          </div>
+          <div class="item-date">1st June – 15th July (2023–2024)</div>
+        </div>
+        <ul class="bullets">
+          <li>Awarded Certificate of Completion with <strong>Outstanding Performance</strong> in 6-Week Industrial Training Program in Android Development under Instructor Prince Raj Verma.</li>
+          <li>Engineered native Android UIs, managing activity lifecycles, intent flows, layout architectures, and REST API data integration.</li>
+          <li>Handled debugging, memory profiling, local database connectivity, and deployment workflows.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Networking & Technical Support Industrial Training</div>
+            <div class="item-company">Ajay Cables & Broadband Service OPC Pvt. Ltd.</div>
+          </div>
+          <div class="item-date">07/06/2023 – 18/07/2023</div>
+        </div>
+        <ul class="bullets">
+          <li>Completed 6-week hands-on training in corporate networking topology, broadband infrastructure, and fiber optics.</li>
+          <li>Executed hardware diagnostics, line troubleshooting, router configuration, and customer support ticket resolutions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Major Projects -->
+    <section>
+      <div class="section-title">Key Projects</div>
+
+      <div class="item">
+        <div class="item-title">AI-Based Health Monitoring System (AI & IoT)</div>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 2px;">
+          Combines Machine Learning models with IoT sensor data to track real-time health metrics. Presented at regional Technical Festivals.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Web-Based Resume Builder System for University Students</div>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 2px;">
+          Full-stack React & Node.js application enabling students to construct and export ATS-friendly resumes with live preview.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Government Scheme Portal for Startup Businesses</div>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 2px;">
+          Web platform built with PHP & SQL to connect startup founders with government grants, schemes, and eligibility filters.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Advanced IP Address Finder & Network Diagnostic Utility</div>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 2px;">
+          Python network analysis tool providing deep IP tracing, geolocation lookup, and port verification.
+        </p>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <div class="section-title">Technical Skillset</div>
+
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <div class="skill-cat-name">Languages</div>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">Advanced Java</span>
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">C#</span>
+            <span class="tag">VB.NET</span>
+            <span class="tag">SQL</span>
+            <span class="tag">PL/SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat-name">Web & Mobile</div>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Android Studio</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat-name">AI & Core Domains</div>
+          <div class="skill-tags">
+            <span class="tag">Artificial Intelligence</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Generative AI</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Ethical Hacking</span>
+            <span class="tag">Network Security</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathons & Achievements -->
+    <section>
+      <div class="section-title">Hackathons & Key Accomplishments</div>
+      <ul class="bullets">
+        <li><strong>ArtPark CodeForge Hackathon:</strong> Participated as Team <strong>"Hack Pack"</strong> in the <em>Build & Submit - Prototype Development Round</em> organized by the Indian Institute of Science (IISc), Bangalore on the Unstop platform.</li>
+        <li><strong>Technical Festivals Presenter:</strong> Demonstrated AI + IoT integrated smart healthcare system.</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
