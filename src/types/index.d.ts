@@ -49,6 +49,7 @@ export type TCertification = {
   issuer: string;
   date: string;
   credentialUrl?: string;
+  image?: string;
   description: string;
   skillsBadge?: string[];
 };

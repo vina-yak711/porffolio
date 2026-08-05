@@ -214,21 +214,36 @@ const educationData: TEducation[] = [
 
 const certificationsData: TCertification[] = [
   {
-    title: "ArtPark CodeForge Hackathon - Prototype Round",
-    issuer: "Indian Institute of Science (IISc), Bangalore (via Unstop)",
-    date: "Recent",
-    credentialUrl: "https://unstop.com",
+    title: "ArtPark CodeForge Hackathon - Prototype Development Round",
+    issuer: "Indian Institute of Science (IISc), Bangalore & Unstop",
+    date: "2023–2024",
+    credentialUrl: "/certificates/artpark_codeforge_certificate.pdf",
+    image: "/certificates/artpark_codeforge_certificate.png",
     description:
-      "Collaborated in a high-intensity hackathon prototype development round to create innovative real-world software solutions.",
-    skillsBadge: ["IISc Bangalore", "Unstop", "Prototype Dev", "Teamwork", "AI"],
+      "Participated as Team 'Hack Pack' in the Build & Submit - Prototype Development Round of ArtPark CodeForge Hackathon organised by Indian Institute of Science (IISc), Bangalore.",
+    skillsBadge: [
+      "IISc Bangalore",
+      "Unstop",
+      "Team Hack Pack",
+      "Prototype Dev",
+      "ArtPark CodeForge",
+    ],
   },
   {
     title: "6-Week Industrial Training in Android Development",
-    issuer: "UEF EdTech Pvt. Ltd.",
-    date: "1st June – 15th July",
+    issuer: "UR Engineering Friend / UEF EdTech Pvt. Ltd.",
+    date: "1st June – 15th July (2023–2024)",
+    credentialUrl: "/certificates/android_dev_certificate.png",
+    image: "/certificates/android_dev_certificate.png",
     description:
-      "Completed certified industrial training covering Android App Architecture, API Integration, Activity Lifecycle, and App Deployment.",
-    skillsBadge: ["Android", "Mobile Dev", "Java/Kotlin", "API Integration"],
+      "Awarded Certificate of Completion for outstanding performance in the 6-Week Industrial Training Program in Android Development under Instructor Prince Raj Verma (CIN: U72900BR2022OPC058386).",
+    skillsBadge: [
+      "Android Dev",
+      "UEF EdTech",
+      "Prince Raj Verma",
+      "Mobile Apps",
+      "Outstanding Performance",
+    ],
   },
   {
     title: "6-Week Industrial Training in Networking & Infrastructure",
