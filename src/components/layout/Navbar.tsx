@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Sun, Moon, Menu, X, FileText } from "lucide-react";
+import { Sun, Moon, Zap, Menu, X, FileText } from "lucide-react";
 
 import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
@@ -110,12 +110,26 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="p-2 rounded-xl bg-tertiary border border-gray-700/40 hover:border-accent text-secondary hover:text-accent transition-all duration-200"
+            title={`Current Theme: ${theme.toUpperCase()} (Click to switch)`}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-tertiary border border-gray-700/40 hover:border-accent text-secondary hover:text-accent transition-all duration-200 text-xs font-semibold"
           >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-yellow-400" />
-            ) : (
-              <Moon className="w-5 h-5 text-indigo-600" />
+            {theme === "dark" && (
+              <>
+                <Moon className="w-4 h-4 text-purple-400" />
+                <span className="hidden lg:inline text-purple-300">Dark</span>
+              </>
+            )}
+            {theme === "light" && (
+              <>
+                <Sun className="w-4 h-4 text-amber-500" />
+                <span className="hidden lg:inline text-amber-600">Light</span>
+              </>
+            )}
+            {theme === "cyber" && (
+              <>
+                <Zap className="w-4 h-4 text-cyan-400" />
+                <span className="hidden lg:inline text-cyan-400">Cyber</span>
+              </>
             )}
           </button>
         </div>
@@ -126,13 +140,12 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="p-2 rounded-xl bg-tertiary border border-gray-700/40 text-secondary hover:text-accent"
+            title={`Current Theme: ${theme.toUpperCase()}`}
+            className="flex items-center gap-1 p-2 rounded-xl bg-tertiary border border-gray-700/40 text-secondary hover:text-accent"
           >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-yellow-400" />
-            ) : (
-              <Moon className="w-5 h-5 text-indigo-600" />
-            )}
+            {theme === "dark" && <Moon className="w-5 h-5 text-purple-400" />}
+            {theme === "light" && <Sun className="w-5 h-5 text-amber-500" />}
+            {theme === "cyber" && <Zap className="w-5 h-5 text-cyan-400" />}
           </button>
 
           {/* Mobile Menu Icon */}
