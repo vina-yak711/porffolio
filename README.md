@@ -8,7 +8,11 @@
 
 Welcome to the official 3D Portfolio repository of **Vinayak Subhash Deshmane** — Artificial Intelligence & Data Science student and Software Engineer.
 
-![Portfolio UI Preview Banner](./public/assets/portfolio_preview.png)
+### 📸 Live Website Preview
+![Vinayak Deshmane Portfolio Hero](./public/assets/real_portfolio.png)
+
+### 📄 Printable Resume Preview
+![Vinayak Deshmane Printable Resume](./public/assets/real_resume.png)
 
 ---
 
