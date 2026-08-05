@@ -1,4 +1,6 @@
+import React from "react";
 import { motion } from "framer-motion";
+import { UserCheck } from "lucide-react";
 
 import { styles } from "../../constants/styles";
 import { fadeIn } from "../../utils/motion";
@@ -17,14 +19,14 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 xs:w-[320px] w-full rounded-3xl p-10"
+    className="bg-black-200 xs:w-[320px] w-full rounded-3xl p-10 flex flex-col justify-between"
   >
     <p className="text-[48px] font-black text-white">"</p>
 
     <div className="mt-1">
       <p className="text-[18px] tracking-wider text-white">{testimonial}</p>
 
-      <div className="mt-7 flex items-center justify-between gap-1">
+      <div className="mt-7 flex items-center justify-between gap-2">
         <div className="flex flex-1 flex-col">
           <p className="text-[16px] font-medium text-white">
             <span className="blue-text-gradient">@</span> {name}
@@ -34,11 +36,17 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
           </p>
         </div>
 
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="h-10 w-10 rounded-full object-cover"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={`feedback_by-${name}`}
+            className="h-10 w-10 rounded-full object-cover border border-purple-500/30"
+          />
+        ) : (
+          <div className="h-10 w-10 rounded-full bg-purple-500/20 text-accent border border-purple-500/30 flex items-center justify-center font-bold text-sm">
+            <UserCheck className="w-5 h-5 text-accent" />
+          </div>
+        )}
       </div>
     </div>
   </motion.div>

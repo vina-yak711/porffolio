@@ -285,7 +285,6 @@ const testimonials: TTestimonial[] = [
     name: "Training Mentor",
     designation: "Senior Android Engineer",
     company: "UEF EdTech Pvt. Ltd.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     testimonial:
@@ -293,7 +292,6 @@ const testimonials: TTestimonial[] = [
     name: "Technical Supervisor",
     designation: "Infrastructure Lead",
     company: "Ajay Cables & Broadband Service",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
   },
 ];
 
