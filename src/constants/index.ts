@@ -217,8 +217,8 @@ const certificationsData: TCertification[] = [
     title: "ArtPark CodeForge Hackathon - Prototype Development Round",
     issuer: "Indian Institute of Science (IISc), Bangalore & Unstop",
     date: "2023–2024",
-    credentialUrl: "/certificates/artpark_codeforge_certificate.pdf",
-    image: "/certificates/artpark_codeforge_certificate.png",
+    credentialUrl: "./certificates/artpark_codeforge_certificate.pdf",
+    image: "./certificates/artpark_codeforge_certificate.png",
     description:
       "Participated as Team 'Hack Pack' in the Build & Submit - Prototype Development Round of ArtPark CodeForge Hackathon organised by Indian Institute of Science (IISc), Bangalore.",
     skillsBadge: [
@@ -233,8 +233,8 @@ const certificationsData: TCertification[] = [
     title: "6-Week Industrial Training in Android Development",
     issuer: "UR Engineering Friend / UEF EdTech Pvt. Ltd.",
     date: "1st June – 15th July (2023–2024)",
-    credentialUrl: "/certificates/android_dev_certificate.png",
-    image: "/certificates/android_dev_certificate.png",
+    credentialUrl: "./certificates/android_dev_certificate.png",
+    image: "./certificates/android_dev_certificate.png",
     description:
       "Awarded Certificate of Completion for outstanding performance in the 6-Week Industrial Training Program in Android Development under Instructor Prince Raj Verma (CIN: U72900BR2022OPC058386).",
     skillsBadge: [

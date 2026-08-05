@@ -57,7 +57,7 @@ export const config: TConfig = {
     github: "https://github.com/vina-yak711",
     whatsapp: "vina_yak711",
     location: "Maharashtra, India",
-    resumeUrl: "/resume.html",
+    resumeUrl: "./resume.html",
   },
   hero: {
     name: "Vinayak Deshmane",
