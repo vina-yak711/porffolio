@@ -248,27 +248,27 @@ const Contact = () => {
 
         {/* Quick Contact Badges */}
         <div className="mt-6 flex flex-wrap gap-2.5 text-xs sm:text-sm text-secondary">
-          {/* Primary Email */}
+          {/* Primary Email Badge */}
           <a
             href={`mailto:${config.html.email}`}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:text-white hover:border-accent font-medium transition-all"
-            title="Send Email to Vinayak"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:text-white hover:border-accent font-medium transition-all"
+            title="Send Direct Email to Vinayak"
           >
             <Mail className="w-4 h-4 text-accent" />
-            <span>{config.html.email}</span>
+            <span>Email</span>
           </a>
 
-          {/* WhatsApp Direct Chat */}
+          {/* WhatsApp Direct Chat Badge */}
           {config.html.whatsapp && (
             <a
               href="https://wa.me/917249868441?text=Hi%20Vinayak,%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect!"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:text-emerald-300 hover:border-emerald-400 font-medium transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:text-emerald-300 hover:border-emerald-400 font-medium transition-all"
               title="Open WhatsApp Direct Chat"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>WhatsApp: {config.html.whatsapp}</span>
+              <span>WhatsApp</span>
             </a>
           )}
 
@@ -276,7 +276,7 @@ const Contact = () => {
           <button
             type="button"
             onClick={() => setIsInstagramModalOpen(true)}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:text-pink-300 hover:border-pink-400 font-medium transition-all cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:text-pink-300 hover:border-pink-400 font-medium transition-all cursor-pointer"
             title="View Both Instagram Accounts"
           >
             <SocialIcon name="instagram" className="w-4 h-4" />
@@ -284,7 +284,7 @@ const Contact = () => {
           </button>
 
           {/* Location */}
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gray-800/40 border border-gray-700/40 text-gray-300 font-medium">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-800/40 border border-gray-700/40 text-gray-300 font-medium">
             <MapPin className="w-4 h-4 text-purple-400" />
             <span>{config.html.location}</span>
           </div>
