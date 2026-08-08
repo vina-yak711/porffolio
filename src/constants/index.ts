@@ -262,6 +262,16 @@ const socialLinks: TSocialLink[] = [
     iconName: "github",
   },
   {
+    name: "Instagram (@vina_yak711)",
+    url: "https://www.instagram.com/vina_yak711/",
+    iconName: "instagram",
+  },
+  {
+    name: "Instagram (@viinayak.in)",
+    url: "https://www.instagram.com/viinayak.in/",
+    iconName: "instagram",
+  },
+  {
     name: "WhatsApp",
     url: "https://wa.me/917249868441?text=Hi%20Vinayak,%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect!",
     iconName: "whatsapp",

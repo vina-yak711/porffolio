@@ -137,6 +137,26 @@ const Contact = () => {
             </a>
           )}
 
+          <a
+            href="https://www.instagram.com/vina_yak711/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:border-pink-400 font-medium transition-all"
+          >
+            <SocialIcon name="instagram" className="w-4 h-4" />
+            <span>@vina_yak711</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/viinayak.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 hover:border-pink-400 font-medium transition-all"
+          >
+            <SocialIcon name="instagram" className="w-4 h-4" />
+            <span>@viinayak.in</span>
+          </a>
+
           <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-accent font-medium">
             <MapPin className="w-4 h-4" />
             <span>{config.html.location}</span>
