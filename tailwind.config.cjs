@@ -6,12 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--bg-primary, #050816)",
-        secondary: "var(--text-secondary, #aaa6c3)",
+        primary: "var(--text-primary, #f8fafc)",
+        secondary: "var(--text-secondary, #cbd5e1)",
         tertiary: "var(--bg-tertiary, #151030)",
+        "bg-primary": "var(--bg-primary, #050816)",
+        "bg-secondary": "var(--bg-secondary, #090d22)",
         "black-100": "var(--bg-card, #100d25)",
-        "black-200": "var(--bg-card-alt, #090325)",
-        "white-100": "var(--text-primary, #f3f3f3)",
+        "black-200": "var(--bg-card-alt, #1a1440)",
+        "white-100": "var(--text-primary, #f8fafc)",
         accent: "var(--accent-color, #915EFF)",
       },
       boxShadow: {
