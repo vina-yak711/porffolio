@@ -5,7 +5,7 @@ import { styles } from "../../constants/styles";
 import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
 import { socialLinks } from "../../constants";
-import { SocialIcon } from "../atoms/SocialIcon";
+import { SocialButton } from "../atoms/SocialButton";
 import { getAssetUrl } from "../../utils/assets";
 
 const Hero = () => {
@@ -56,16 +56,12 @@ const Hero = () => {
             {/* Social Links Quick Bar */}
             <div className="flex items-center gap-3 ml-0 sm:ml-4 border-t sm:border-t-0 sm:border-l border-gray-700/40 pt-4 sm:pt-0 sm:pl-4">
               {socialLinks.map((social) => (
-                <a
+                <SocialButton
                   key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.name}
+                  social={social}
                   className="p-2.5 rounded-xl bg-tertiary border border-gray-700/40 hover:border-accent text-secondary hover:text-accent transition-all duration-200"
-                >
-                  <SocialIcon name={social.name} className="w-5 h-5" />
-                </a>
+                  iconClassName="w-5 h-5"
+                />
               ))}
             </div>
           </div>

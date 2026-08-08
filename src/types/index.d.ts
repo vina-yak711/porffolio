@@ -58,6 +58,7 @@ export type TSocialLink = {
   name: string;
   url: string;
   iconName: string;
+  isInstagram?: boolean;
 };
 
 export type TNavLink = {

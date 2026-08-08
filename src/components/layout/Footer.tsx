@@ -1,7 +1,7 @@
 import { ArrowUp, Heart } from "lucide-react";
 import { config } from "../../constants/config";
 import { navLinks, socialLinks } from "../../constants";
-import { SocialIcon } from "../atoms/SocialIcon";
+import { SocialButton } from "../atoms/SocialButton";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -40,16 +40,12 @@ const Footer = () => {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             {socialLinks.map((social) => (
-              <a
+              <SocialButton
                 key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
+                social={social}
                 className="p-2 rounded-lg bg-black-100 border border-gray-700/40 hover:border-accent text-secondary hover:text-accent transition-all"
-              >
-                <SocialIcon name={social.name} className="w-4 h-4" />
-              </a>
+                iconClassName="w-4 h-4"
+              />
             ))}
           </div>
 
