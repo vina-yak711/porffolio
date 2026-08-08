@@ -25,9 +25,6 @@
 ### 📄 2. Dedicated Printable HTML & PDF Resume
 ![Vinayak Deshmane Printable Resume Preview](./public/assets/real_resume.png)
 
-### 🎨 3. Full Portfolio Experience & High-Contrast Design
-![Vinayak Deshmane Portfolio Full View](./public/assets/portfolio_preview.png)
-
 ---
 
 ## 👤 About Developer
