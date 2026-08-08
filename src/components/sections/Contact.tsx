@@ -299,7 +299,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Name Input */}
             <label className="flex flex-col">
-              <span className="mb-2 font-medium text-primary text-sm">
+              <span className="mb-2 font-semibold text-white tracking-wide text-sm">
                 {config.contact.form.name.span} *
               </span>
               <input
@@ -308,7 +308,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder={config.contact.form.name.placeholder}
-                className="bg-black-100 placeholder:text-secondary rounded-xl border border-gray-700/40 px-4 py-3.5 text-primary outline-none focus:border-accent transition-colors text-sm"
+                className="w-full bg-[#100d25] text-white placeholder:text-gray-400 rounded-xl border border-purple-500/30 px-4 py-3.5 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                 required
               />
             </label>
@@ -316,7 +316,7 @@ const Contact = () => {
             {/* Email Input with Typo Detection */}
             <div className="flex flex-col">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-medium text-primary text-sm">
+                <span className="font-semibold text-white tracking-wide text-sm">
                   {config.contact.form.email.span} *
                 </span>
                 {isEmailVerified ? (
@@ -340,10 +340,10 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder={config.contact.form.email.placeholder}
-                className={`bg-black-100 placeholder:text-secondary rounded-xl border px-4 py-3.5 text-primary outline-none transition-colors text-sm ${
+                className={`w-full bg-[#100d25] text-white placeholder:text-gray-400 rounded-xl border px-4 py-3.5 outline-none transition-all text-sm ${
                   isEmailVerified
-                    ? "border-emerald-500/50"
-                    : "border-gray-700/40 focus:border-accent"
+                    ? "border-emerald-500/50 focus:border-emerald-400"
+                    : "border-purple-500/30 focus:border-accent focus:ring-1 focus:ring-accent"
                 }`}
                 required
               />
@@ -367,7 +367,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Phone / WhatsApp Backup Field */}
             <label className="flex flex-col">
-              <span className="mb-2 font-medium text-primary text-sm flex items-center gap-1.5">
+              <span className="mb-2 font-semibold text-white tracking-wide text-sm flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-emerald-400" />
                 <span>WhatsApp / Phone Number (Optional)</span>
               </span>
@@ -377,25 +377,25 @@ const Contact = () => {
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="+91 98765 43210 (For WhatsApp reply)"
-                className="bg-black-100 placeholder:text-secondary rounded-xl border border-gray-700/40 px-4 py-3.5 text-primary outline-none focus:border-accent transition-colors text-sm"
+                className="w-full bg-[#100d25] text-white placeholder:text-gray-400 rounded-xl border border-purple-500/30 px-4 py-3.5 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
               />
             </label>
 
             {/* Subject / Purpose Selector */}
             <label className="flex flex-col">
-              <span className="mb-2 font-medium text-primary text-sm">
+              <span className="mb-2 font-semibold text-white tracking-wide text-sm">
                 Subject / Inquiry Topic
               </span>
               <select
                 name="subject"
                 value={form.subject}
                 onChange={handleChange}
-                className="bg-black-100 text-primary rounded-xl border border-gray-700/40 px-4 py-3.5 text-sm outline-none focus:border-accent transition-colors cursor-pointer"
+                className="w-full bg-[#100d25] text-white rounded-xl border border-purple-500/30 px-4 py-3.5 text-sm outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all cursor-pointer"
               >
-                <option value="Job Opportunity / Hiring">🚀 Job Opportunity / Hiring</option>
-                <option value="Freelance Web / AI Project">💻 Freelance Web / AI Project</option>
-                <option value="Collaboration / Networking">🤝 Collaboration / Networking</option>
-                <option value="General Portfolio Inquiry">💼 General Portfolio Inquiry</option>
+                <option value="Job Opportunity / Hiring" className="bg-[#100d25] text-white">🚀 Job Opportunity / Hiring</option>
+                <option value="Freelance Web / AI Project" className="bg-[#100d25] text-white">💻 Freelance Web / AI Project</option>
+                <option value="Collaboration / Networking" className="bg-[#100d25] text-white">🤝 Collaboration / Networking</option>
+                <option value="General Portfolio Inquiry" className="bg-[#100d25] text-white">💼 General Portfolio Inquiry</option>
               </select>
             </label>
           </div>
@@ -430,7 +430,7 @@ const Contact = () => {
                     value={userOtp}
                     onChange={(e) => setUserOtp(e.target.value)}
                     placeholder="Enter 4-digit code"
-                    className="flex-1 bg-black-100 text-center font-mono text-base tracking-widest rounded-xl border border-gray-700/60 px-4 py-2 text-primary outline-none focus:border-accent"
+                    className="flex-1 bg-[#100d25] text-white text-center font-mono text-base tracking-widest rounded-xl border border-purple-500/30 px-4 py-2 outline-none focus:border-accent"
                   />
                   <button
                     type="button"
@@ -461,7 +461,7 @@ const Contact = () => {
 
           {/* Message Textarea */}
           <label className="flex flex-col">
-            <span className="mb-2 font-medium text-primary text-sm">
+            <span className="mb-2 font-semibold text-white tracking-wide text-sm">
               {config.contact.form.message.span} *
             </span>
             <textarea
@@ -470,7 +470,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder={config.contact.form.message.placeholder}
-              className="bg-black-100 placeholder:text-secondary rounded-xl border border-gray-700/40 px-4 py-3.5 text-primary outline-none focus:border-accent transition-colors resize-none text-sm"
+              className="w-full bg-[#100d25] text-white placeholder:text-gray-400 rounded-xl border border-purple-500/30 px-4 py-3.5 outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none text-sm font-normal"
               required
             />
           </label>
