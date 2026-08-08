@@ -126,10 +126,15 @@ const Contact = () => {
           )}
 
           {config.html.whatsapp && (
-            <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium">
+            <a
+              href="https://wa.me/917249868441?text=Hi%20Vinayak,%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:border-emerald-400 font-medium transition-all"
+            >
               <MessageSquare className="w-4 h-4" />
-              <span>WhatsApp: @{config.html.whatsapp}</span>
-            </div>
+              <span>WhatsApp: {config.html.whatsapp}</span>
+            </a>
           )}
 
           <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-accent font-medium">

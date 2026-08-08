@@ -55,7 +55,7 @@ export const config: TConfig = {
     email: "vinuu02052005@gmail.com",
     secondaryEmail: "subhashdeshmane0@gmail.com",
     github: "https://github.com/vina-yak711",
-    whatsapp: "vina_yak711",
+    whatsapp: "+91 7249868441",
     location: "Maharashtra, India",
     resumeUrl: "./resume.html",
   },
