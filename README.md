@@ -151,12 +151,19 @@ graph TD
 
 ---
 
-## 📊 GitHub Analytics
+## 📊 GitHub Analytics & Real-Time Activity
 
 <div align="center">
 
-[![Vinayak's GitHub Stats](https://github-readme-stats.vercel.app/api?username=vina-yak711&show_icons=true&theme=tokyonight&hide_border=true&title_color=915EFF&text_color=cbd5e1&icon_color=00C49F)](https://github.com/vina-yak711)
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vina-yak711&layout=compact&theme=tokyonight&hide_border=true&title_color=915EFF&text_color=cbd5e1)](https://github.com/vina-yak711)
+<a href="https://github.com/vina-yak711">
+  <img src="https://streak-stats.demolab.com/?user=vina-yak711&theme=tokyonight&hide_border=true&ring=915EFF&fire=00C49F&currStreakLabel=915EFF&sideLabels=cbd5e1&dates=cbd5e1" width="85%" alt="Vinayak's Streak Stats" />
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/vina-yak711">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vina-yak711&bg_color=050816&color=915EFF&line=00C49F&point=FFFFFF&area=true&hide_border=true" width="95%" alt="Vinayak's Contribution Activity Graph" />
+</a>
 
 </div>
 

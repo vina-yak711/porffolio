@@ -14,10 +14,11 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=vina-yak711&label=Profile%20Views&color=915EFF&style=flat-square" alt="Profile Views" />
   <img src="https://img.shields.io/badge/Status-Open%20For%20Opportunities-00C49F?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/Focus-AI%20%7C%20Full%20Stack%20%7C%20Android-8A2BE2?style=flat-square" alt="Focus" />
   <img src="https://img.shields.io/badge/Location-Maharashtra%2C%20India-blue?style=flat-square" alt="Location" />
 </p>
 
-<!-- Quick Connect Buttons -->
+<!-- Quick Action Buttons -->
 <p align="center">
   <a href="https://vina-yak711.github.io/porffolio/">
     <img src="https://img.shields.io/badge/🌐_3D_Portfolio-vina--yak711.github.io-8A2BE2?style=for-the-badge&logo=googlechrome&logoColor=white" />
@@ -53,10 +54,10 @@
 ## 👨‍💻 Quick Introduction
 
 ```yaml
-Name: Vinayak Subhash Deshmane
-Current_Degree: B.Tech in Artificial Intelligence & Data Science (3rd Year)
+Developer: Vinayak Subhash Deshmane
+Degree_Pursuing: B.Tech in Artificial Intelligence & Data Science (3rd Year)
 College: Siddhivinayak Technical Campus, Shegaon
-Diploma: Diploma in Computer Engineering, Govt. Polytechnic Hingoli (75.80%)
+Diploma: Diploma in Computer Engineering, Govt. Polytechnic Hingoli (75.80% Aggregate)
 Motto: "Learn • Build • Innovate • Inspire • Repeat"
 Focus_Areas: [Artificial Intelligence, Machine Learning, Full-Stack Web, Android Apps, 3D WebGL]
 Open_For: [AI/ML Internships, Software Engineering Roles, Freelance Web & Mobile Projects]
@@ -74,47 +75,39 @@ Open_For: [AI/ML Internships, Software Engineering Roles, Freelance Web & Mobile
 
 <div align="center">
 
-### 💻 Languages & Frameworks
+### 💻 Programming Languages & Frameworks
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,kotlin,cpp,c,ts,js,html,css,php,react,threejs,tailwind,nodejs,bootstrap,mysql" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,java,kotlin,cpp,c,ts,js,html,css,php,react,threejs,tailwind,nodejs,bootstrap,mysql" />
+  </a>
 </p>
 
 ### 🧰 Developer Tools, Cloud & Environments
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,androidstudio,docker,vite,vscode,figma,postman,linux,windows" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,github,androidstudio,docker,vite,vscode,figma,postman,linux,windows" />
+  </a>
 </p>
 
 </div>
 
 ---
 
-## 🏆 GitHub Achievements & Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=vina-yak711&theme=tokyonight&no-frame=true&margin-w=4&margin-h=4" alt="GitHub Trophies" />
-</div>
-
----
-
-## 📊 Dynamic GitHub Activity & Real-Time Stats
+## 📊 Live GitHub Activity & Streak Analytics
 
 <div align="center">
 
-<table border="0">
-  <tr>
-    <td width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=vina-yak711&show_icons=true&theme=tokyonight&hide_border=true&title_color=915EFF&text_color=cbd5e1&icon_color=00C49F" width="100%" alt="Vinayak's Stats" />
-    </td>
-    <td width="50%">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=vina-yak711&theme=tokyonight&hide_border=true&ring=915EFF&fire=00C49F&currStreakLabel=915EFF" width="100%" alt="Vinayak's Streak" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vina-yak711&layout=compact&theme=tokyonight&hide_border=true&title_color=915EFF&text_color=cbd5e1" width="100%" alt="Top Languages" />
-    </td>
-  </tr>
-</table>
+<!-- GitHub Streak Stats (100% Uptime Demolab Engine) -->
+<a href="https://github.com/vina-yak711">
+  <img src="https://streak-stats.demolab.com/?user=vina-yak711&theme=tokyonight&hide_border=true&ring=915EFF&fire=00C49F&currStreakLabel=915EFF&sideLabels=cbd5e1&dates=cbd5e1" width="85%" alt="Vinayak's GitHub Streak" />
+</a>
+
+<br/><br/>
+
+<!-- Real-Time Activity Graph -->
+<a href="https://github.com/vina-yak711">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vina-yak711&bg_color=050816&color=915EFF&line=00C49F&point=FFFFFF&area=true&hide_border=true" width="95%" alt="Vinayak's Contribution Activity Graph" />
+</a>
 
 </div>
 
