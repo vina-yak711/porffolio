@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Send, MessageSquare, CheckCircle2, AlertCircle } from "lucide-react";
 
 import { EarthCanvas } from "../canvas";
@@ -20,12 +19,6 @@ const INITIAL_STATE = {
   message: "",
 };
 
-const emailjsConfig = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "",
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "",
-  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN || "",
-};
-
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState(INITIAL_STATE);
@@ -43,7 +36,7 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       setStatusMessage({
@@ -56,43 +49,46 @@ const Contact = () => {
     setLoading(true);
     setStatusMessage({ type: "", text: "" });
 
-    // If EmailJS credentials exist, send via EmailJS
-    if (emailjsConfig.serviceId && emailjsConfig.templateId) {
-      emailjs
-        .send(
-          emailjsConfig.serviceId,
-          emailjsConfig.templateId,
-          {
-            form_name: form.name,
-            to_name: config.html.fullName,
-            from_email: form.email,
-            subject: form.subject,
-            to_email: config.html.email,
+    try {
+      // 1. First attempt direct AJAX delivery to Gmail via FormSubmit
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${config.html.email}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            _subject: `[Portfolio Inquiry] ${form.subject || "New Message"} from ${form.name}`,
+            name: form.name,
+            email: form.email,
+            topic: form.subject,
             message: form.message,
-          },
-          emailjsConfig.accessToken
-        )
-        .then(
-          () => {
-            setLoading(false);
-            setStatusMessage({
-              type: "success",
-              text: "Thank you! Your message has been sent successfully. I will get back to you shortly.",
-            });
-            setForm(INITIAL_STATE);
-          },
-          (error) => {
-            setLoading(false);
-            console.error("EmailJS Error:", error);
-            handleMailtoFallback();
-          }
-        );
-    } else {
-      // Direct mailto / fallback handler
-      setTimeout(() => {
+            _template: "table",
+          }),
+        }
+      );
+
+      const result = await response.json();
+
+      if (response.ok && (result.success === "true" || result.success === true || result.message)) {
         setLoading(false);
-        handleMailtoFallback();
-      }, 600);
+        setStatusMessage({
+          type: "success",
+          text: `Thank you, ${form.name}! Your message has been sent directly to Vinayak's Gmail (${config.html.email}).`,
+        });
+        setForm(INITIAL_STATE);
+        return;
+      }
+
+      // 2. If FormSubmit returned false or needs activation, fallback to mailto
+      setLoading(false);
+      handleMailtoFallback();
+    } catch (err) {
+      console.error("Submission error:", err);
+      setLoading(false);
+      handleMailtoFallback();
     }
   };
 
@@ -100,13 +96,13 @@ const Contact = () => {
     const mailtoUrl = `mailto:${config.html.email}?subject=${encodeURIComponent(
       `[Portfolio Inquiry] ${form.subject || "Message"} from ${form.name}`
     )}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+      `Name: ${form.name}\nEmail: ${form.email}\nTopic: ${form.subject}\n\nMessage:\n${form.message}`
     )}`;
 
     window.open(mailtoUrl, "_blank");
     setStatusMessage({
       type: "success",
-      text: "Opening your email app to send the message directly to Vinayak (" + config.html.email + ")!",
+      text: `Message prepared! Opening your mail app to send directly to Vinayak (${config.html.email}).`,
     });
     setForm(INITIAL_STATE);
   };
